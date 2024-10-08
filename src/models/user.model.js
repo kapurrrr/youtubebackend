@@ -1,8 +1,7 @@
-import { type } from "express/lib/response";
 import mongoose, {Schema} from "mongoose";
-import jwt from jsonwebtoken
-import jsonwebtoken from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
+
 
 const userSchema = new Schema({
         username:{
@@ -38,7 +37,7 @@ const userSchema = new Schema({
             ref: 'video'
         }],
         password:{
-            type:string,
+            type:String,
             required: [true, 'Password is required'],
         },
         refreshToken:{
